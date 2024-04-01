@@ -1,0 +1,4 @@
+.markdown-source-view.mod-cm6 span:where(.cm-url.cm-url, .cm-blockid, .cm-inline-code.cm-link, .cm-hmd-internal-link, .cm-header.cm-hmd-internal-link, .cm-hmd-internal-link .cm-underline),
+.internal-link {
+    text-decoration: none !important;
+}
