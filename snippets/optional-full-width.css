@@ -1,0 +1,9 @@
+.wide-view {
+  --custom-line-width: 100%; /* <- change this */
+  --file-line-width: var(--custom-line-width);
+}
+
+body.minimal-theme.minimal-theme .wide-view {
+  --line-width: var(--custom-line-width);
+  --max-width: 95%;
+}

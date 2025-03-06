@@ -1,15 +1,21 @@
 [
+  "github-link",
   "git-file-explorer",
+  "periodic-notes",
   "obsidian-linter",
-  "obsidian-advanced-slides",
-  "calendar",
-  "dataview",
-  "obsidian-image-caption",
   "nldates-obsidian",
-  "obsidian-pandoc-reference-list",
-  "obsidian-plantuml",
+  "obsidian-visually-numbered-headings",
+  "terminal",
   "obsidian42-strange-new-worlds",
+  "obsidian-languagetool-plugin",
+  "obsidian-editor-shortcuts",
+  "obsidian-vimrc-support",
+  "dataview",
   "obsidian-tasks-plugin",
+  "markwhen",
   "obsidian-zotero-desktop-connector",
-  "obsidian-visually-numbered-headings"
+  "obsidian-auto-link-title",
+  "image-captions",
+  "obsidian-plantuml",
+  "calendar"
 ]

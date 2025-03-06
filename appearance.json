@@ -1,4 +1,12 @@
 {
-  "accentColor": "",
-  "cssTheme": "Atom"
+  "accentColor": "#07e4a1",
+  "baseFontSizeAction": true,
+  "theme": "moonstone",
+  "textFontFamily": "Fira Code Retina",
+  "monospaceFontFamily": "Fira Code Retina",
+  "cssTheme": "Things",
+  "baseFontSize": 16,
+  "enabledCssSnippets": [
+    "optional-full-width"
+  ]
 }

@@ -1,8 +1,20 @@
 {
-  "showLineNumber": true,
-  "useTab": false,
+  "showInlineTitle": false,
+  "vimMode": true,
   "tabSize": 2,
+  "useTab": true,
+  "showLineNumber": true,
   "attachmentFolderPath": "./assets",
   "newFileLocation": "folder",
-  "newFileFolderPath": "mm-core"
+  "newFileFolderPath": "mm-core",
+  "alwaysUpdateLinks": true,
+  "pdfExportSettings": {
+    "pageSize": "Letter",
+    "landscape": false,
+    "margin": "0",
+    "downscalePercent": 100
+  },
+  "showUnsupportedFiles": true,
+  "propertiesInDocument": "source",
+  "userIgnoreFilters": null
 }

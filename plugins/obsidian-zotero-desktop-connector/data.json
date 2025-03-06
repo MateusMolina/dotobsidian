@@ -1,0 +1,29 @@
+{
+  "database": "Zotero",
+  "noteImportFolder": "mm-core",
+  "pdfExportImageDPI": 120,
+  "pdfExportImageFormat": "jpg",
+  "pdfExportImageQuality": 90,
+  "citeFormats": [
+    {
+      "name": "Format #1",
+      "format": "pandoc",
+      "command": "",
+      "brackets": true
+    }
+  ],
+  "exportFormats": [
+    {
+      "name": "Import #1",
+      "outputPathTemplate": "mm-core/@{{citekey}}.md",
+      "imageOutputPathTemplate": "assets/",
+      "imageBaseNameTemplate": "{{citekey}}",
+      "cslStyle": "ieee",
+      "templatePath": "mm-core/templates/citation.md"
+    }
+  ],
+  "citeSuggestTemplate": "[[{{citekey}}]]",
+  "openNoteAfterImport": true,
+  "whichNotesToOpenAfterImport": "first-imported-note",
+  "shouldConcat": true
+}

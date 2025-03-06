@@ -4623,6 +4623,11 @@ var GitRepository = class {
     await gitRepository.setup();
     return gitRepository;
   }
+  static initGitRepo(repoAbsPath) {
+    const git = esm_default(repoAbsPath);
+    git.init();
+    return new GitRepository(repoAbsPath);
+  }
   static isGitRepo(fullPath) {
     const gitDir = (0, import_path2.join)(fullPath, ".git");
     return (0, import_fs.existsSync)(gitDir);
@@ -4754,9 +4759,11 @@ var GitWidget = class {
     });
   }
   guardFunction(fun) {
-    return () => {
+    return (event) => {
+      if (event)
+        event.stopPropagation();
       if (fun && this.eventsEnabled)
-        fun();
+        fun(event);
     };
   }
   addEventListeners() {
@@ -5025,6 +5032,29 @@ var GitFileExplorerSettingTab = class extends import_obsidian3.PluginSettingTab 
   }
 };
 
+// src/initNewRepoHandler.ts
+var import_path3 = require("path");
+var _InitNewRepoHandler = class {
+  constructor(basePath) {
+    this.basePath = basePath;
+    this.withCallback = (callback) => {
+      this.afterInitCallback = callback;
+      return this;
+    };
+    this.install = (menu, folder) => {
+      menu.addItem((item) => {
+        item.setTitle(_InitNewRepoHandler.INIT_NEW_REPO).onClick((e) => {
+          this.afterInitCallback(this.initGitRepository(folder.path));
+        });
+      });
+    };
+    this.initGitRepository = (folderPath) => GitRepository.initGitRepo(this.buildAbsPathTo(folderPath));
+    this.buildAbsPathTo = (path2) => (0, import_path3.join)(this.basePath, path2);
+  }
+};
+var InitNewRepoHandler = _InitNewRepoHandler;
+InitNewRepoHandler.INIT_NEW_REPO = "Initialize a new git repository";
+
 // main.ts
 var GitFileExplorerPlugin = class extends import_obsidian4.Plugin {
   constructor() {
@@ -5040,6 +5070,7 @@ var GitFileExplorerPlugin = class extends import_obsidian4.Plugin {
       );
       await this.widgetManager.update();
       this.registerEventListeners(this.widgetManager.update);
+      this.installFileRepositoryContextMenuHandlers();
     };
   }
   async onload() {
@@ -5087,4 +5118,14 @@ var GitFileExplorerPlugin = class extends import_obsidian4.Plugin {
       callback
     );
   }
+  installFileRepositoryContextMenuHandlers() {
+    const initNewRepoHandler = new InitNewRepoHandler(
+      this.getVaultBasePath()
+    ).withCallback(this.widgetManager.update);
+    this.registerEvent(
+      this.app.workspace.on("file-menu", initNewRepoHandler.install)
+    );
+  }
 };
+
+/* nosourcemap */
