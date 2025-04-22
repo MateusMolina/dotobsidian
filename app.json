@@ -1,8 +1,13 @@
 {
   "showLineNumber": true,
-  "useTab": false,
+  "useTab": true,
   "tabSize": 2,
   "attachmentFolderPath": "./assets",
   "newFileLocation": "folder",
-  "newFileFolderPath": "mm-core"
+  "newFileFolderPath": "mm-core",
+  "vimMode": true,
+  "showInlineTitle": false,
+  "propertiesInDocument": "source",
+  "alwaysUpdateLinks": true,
+  "promptDelete": false
 }

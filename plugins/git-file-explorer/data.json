@@ -1,0 +1,7 @@
+{
+  "promptCommitMsg": true,
+  "enableNavColorUpdater": true,
+  "gitChangesWidgetActive": true,
+  "gitSyncWidgetActive": true,
+  "navColorStyle": "margin-highlight"
+}

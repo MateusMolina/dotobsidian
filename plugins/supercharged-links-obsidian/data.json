@@ -1,0 +1,62 @@
+{
+  "targetAttributes": [],
+  "targetTags": true,
+  "getFromInlineField": true,
+  "enableTabHeader": true,
+  "activateSnippet": true,
+  "enableEditor": true,
+  "enableFileList": true,
+  "enableBacklinks": true,
+  "enableQuickSwitcher": true,
+  "enableSuggestor": true,
+  "selectors": [
+    {
+      "type": "tag",
+      "name": "",
+      "value": "todo",
+      "matchCaseSensitive": false,
+      "match": "exact",
+      "uid": "44c8-fa54",
+      "selectText": true,
+      "selectAppend": false,
+      "selectPrepend": true,
+      "selectBackground": false
+    },
+    {
+      "type": "tag",
+      "name": "",
+      "value": "doing",
+      "matchCaseSensitive": false,
+      "match": "exact",
+      "uid": "aa2a-0f2c",
+      "selectText": true,
+      "selectAppend": false,
+      "selectPrepend": true,
+      "selectBackground": false
+    },
+    {
+      "type": "tag",
+      "name": "",
+      "value": "done",
+      "matchCaseSensitive": false,
+      "match": "exact",
+      "uid": "7490-2f03",
+      "selectText": true,
+      "selectAppend": false,
+      "selectPrepend": true,
+      "selectBackground": false
+    },
+    {
+      "type": "tag",
+      "name": "",
+      "value": "index",
+      "matchCaseSensitive": false,
+      "match": "exact",
+      "uid": "f06a-fca9",
+      "selectText": true,
+      "selectAppend": false,
+      "selectPrepend": true,
+      "selectBackground": false
+    }
+  ]
+}

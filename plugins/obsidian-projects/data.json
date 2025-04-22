@@ -1,0 +1,255 @@
+{
+  "version": 2,
+  "projects": [
+    {
+      "fieldConfig": {
+        "status": {
+          "options": [
+            "todo",
+            "doing"
+          ]
+        },
+        "modified": {
+          "time": false
+        }
+      },
+      "defaultName": "{{date:YYYY-MM}} Task",
+      "templates": [],
+      "excludedNotes": [],
+      "isDefault": true,
+      "dataSource": {
+        "kind": "tag",
+        "config": {
+          "tag": "#task",
+          "hierarchy": false
+        }
+      },
+      "newNotesFolder": "mm-projects/tasks",
+      "views": [
+        {
+          "config": {
+            "groupByField": "status",
+            "columns": {
+              "todo": {
+                "records": [
+                  "mm-inbox/3d Print companion cub.md",
+                  "mm-core/Linux from Scratch.md",
+                  "mm-projects/tasks/2024-12 Install NixOS WSL.md",
+                  "mm-projects/tasks/2024-12 Explore NixOS and Reproducible Dev Builds.md",
+                  "mm-projects/mm-dareus/tasks/2024-08 Implement kinematic solver and publish the updates in the external lib.md",
+                  "mm-projects/tasks/2024-08 Develop a frontmatter task manager.md",
+                  "mm-core/Building AI Apps In a transition phase.md",
+                  "mm-core/What core skills are required to survive in the future.md",
+                  "mm-core/Investment and Taxes.md",
+                  "mm-core/2025 Investment Plan.md",
+                  "mm-projects/tasks/2024-12 Which IDE system to use.md"
+                ],
+                "weight": 0
+              },
+              "doing": {
+                "weight": 1,
+                "records": [
+                  "mm-inbox/Organize tags os mm-core.md",
+                  "mm-projects/tasks/2025-02 Install stuff.md",
+                  "mm-projects/tasks/Install Gitea.md"
+                ]
+              },
+              "done": {
+                "weight": 2,
+                "records": [
+                  "mm-core/Buying Real Estate in Brazil as a German Tax Resident.md",
+                  "mm-core/Fixing fan going nuts on HP Envy x360.md",
+                  "mm-core/Implementing a Camunda - AAS - OPC-UA Connector.md",
+                  "mm-inbox/setup stable diffusion.md",
+                  "mm-projects/mm-music-likes/tasks/2024-08 Finish the drums of Electric Feel.md",
+                  "mm-projects/tasks/2024-09 Install OctoPrint in my Printer.md",
+                  "mm-projects/tasks/2024-12 Streamlining Email, Contacts and Calendars.md"
+                ],
+                "collapse": true
+              }
+            },
+            "includeFields": [
+              "tags"
+            ],
+            "columnWidth": 700
+          },
+          "filter": {
+            "conjunction": "and",
+            "conditions": []
+          },
+          "colors": {
+            "conditions": [
+              {
+                "color": "#0affc2",
+                "condition": {
+                  "field": "tags",
+                  "operator": "has-any-of",
+                  "enabled": true,
+                  "value": "[\"research\"]"
+                }
+              },
+              {
+                "color": "#ff0088",
+                "condition": {
+                  "field": "tags",
+                  "operator": "has-any-of",
+                  "enabled": true,
+                  "value": "[\"plan\"]"
+                }
+              }
+            ]
+          },
+          "sort": {
+            "criteria": [
+              {
+                "field": "created",
+                "order": "asc",
+                "enabled": true
+              }
+            ]
+          },
+          "id": "f237e6c1-292a-4472-8b70-660c87ff5e2e",
+          "name": "Board",
+          "type": "board"
+        },
+        {
+          "config": {
+            "fieldConfig": {
+              "File": {
+                "width": 797
+              },
+              "name": {
+                "width": 705
+              },
+              "path": {
+                "hide": true
+              },
+              "created": {
+                "width": 135
+              },
+              "efforts": {
+                "width": 143,
+                "hide": true
+              },
+              "tags": {
+                "width": 256
+              },
+              "status": {
+                "width": 184
+              }
+            },
+            "orderFields": [
+              "name",
+              "path",
+              "created",
+              "modified",
+              "efforts",
+              "status",
+              "tags"
+            ]
+          },
+          "filter": {
+            "conjunction": "and",
+            "conditions": [
+              {
+                "field": "status",
+                "operator": "is-not",
+                "enabled": true,
+                "value": "done"
+              }
+            ]
+          },
+          "colors": {
+            "conditions": []
+          },
+          "sort": {
+            "criteria": [
+              {
+                "field": "status",
+                "order": "asc",
+                "enabled": true
+              }
+            ]
+          },
+          "id": "b95b7e62-9dfc-48ca-bdee-36b2a60c173b",
+          "name": "Table",
+          "type": "table"
+        }
+      ],
+      "id": "2613b904-ff57-492a-9ef5-107e68cd26cc",
+      "name": "tasks"
+    },
+    {
+      "fieldConfig": {},
+      "defaultName": "",
+      "templates": [],
+      "excludedNotes": [],
+      "isDefault": false,
+      "dataSource": {
+        "kind": "tag",
+        "config": {
+          "tag": "#todo",
+          "hierarchy": false
+        }
+      },
+      "newNotesFolder": "",
+      "views": [
+        {
+          "config": {
+            "fieldConfig": {
+              "name": {
+                "width": 425
+              },
+              "path": {
+                "width": 432
+              }
+            }
+          },
+          "filter": {
+            "conjunction": "and",
+            "conditions": []
+          },
+          "colors": {
+            "conditions": []
+          },
+          "sort": {
+            "criteria": []
+          },
+          "id": "062363c1-37da-48dc-8c3e-bf770a0a8fc4",
+          "name": "Table",
+          "type": "table"
+        },
+        {
+          "config": {},
+          "filter": {
+            "conjunction": "and",
+            "conditions": []
+          },
+          "colors": {
+            "conditions": []
+          },
+          "sort": {
+            "criteria": []
+          },
+          "id": "f62d68af-0d15-47c8-a3eb-3a9c52b73de8",
+          "name": "Board",
+          "type": "board"
+        }
+      ],
+      "id": "96699738-d3a7-4bd0-ae09-38853667117b",
+      "name": "todo"
+    }
+  ],
+  "archives": [],
+  "preferences": {
+    "projectSizeLimit": 1000,
+    "frontmatter": {
+      "quoteStrings": "PLAIN"
+    },
+    "locale": {
+      "firstDayOfWeek": "monday"
+    },
+    "commands": [],
+    "linkBehavior": "open-editor"
+  }
+}

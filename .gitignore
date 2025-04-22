@@ -1,2 +1,23 @@
+## Ignore cosmetic files
 workspace.json
 daily-notes.json
+appearance.json
+graph.json
+types.json
+
+## Ignore plugin data
+plugins/**/*
+!plugins/**/
+!plugins/**/data.json
+
+main.js
+styles.css
+manifest.json
+supercharged-links-gen.css
+
+## Ignore theme data
+themes
+
+## Igore migration files
+*-migration*
+

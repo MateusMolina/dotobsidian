@@ -64,24 +64,27 @@
       "enabled": true
     },
     "move-footnotes-to-the-bottom": {
-      "enabled": true
+      "enabled": false
     },
     "re-index-footnotes": {
       "enabled": false
     },
     "auto-correct-common-misspellings": {
       "enabled": false,
-      "ignore-words": ""
+      "ignore-words": "",
+      "skip-words-with-multiple-capitals": false,
+      "extra-auto-correct-files": []
     },
     "convert-bullet-list-markers": {
       "enabled": true
     },
     "emphasis-style": {
       "enabled": true,
-      "style": "asterisk"
+      "style": "underscore"
     },
     "no-bare-urls": {
-      "enabled": false
+      "enabled": false,
+      "no-bare-uris": false
     },
     "ordered-list-style": {
       "enabled": true,
@@ -108,7 +111,8 @@
       "style": "asterisk"
     },
     "two-spaces-between-lines-with-content": {
-      "enabled": false
+      "enabled": false,
+      "line-break-indicator": "  "
     },
     "unordered-list-style": {
       "enabled": true,
@@ -168,7 +172,9 @@
       "enabled": true
     },
     "space-between-chinese-japanese-or-korean-and-english-or-numbers": {
-      "enabled": false
+      "enabled": false,
+      "english-symbols-punctuation-before": "-+;:'\"°%$)]",
+      "english-symbols-punctuation-after": "-+'\"([¥$"
     },
     "trailing-spaces": {
       "enabled": true,
@@ -199,21 +205,21 @@
       "enabled": true
     },
     "escape-yaml-special-characters": {
-      "enabled": false,
-      "try-to-escape-single-line-arrays": false
+      "enabled": true,
+      "try-to-escape-single-line-arrays": true
     },
     "force-yaml-escape": {
       "enabled": true,
       "force-yaml-escape-keys": "title"
     },
     "format-tags-in-yaml": {
-      "enabled": false
+      "enabled": true
     },
     "format-yaml-array": {
-      "enabled": false,
+      "enabled": true,
       "alias-key": true,
       "tag-key": true,
-      "default-array-style": "single-line",
+      "default-array-style": "multi-line",
       "default-array-keys": true,
       "force-single-line-array-style": "",
       "force-multi-line-array-style": ""
@@ -241,10 +247,13 @@
       "enabled": true,
       "date-created": true,
       "date-created-key": "created",
-      "force-retention-of-create-value": false,
       "date-modified": true,
       "date-modified-key": "modified",
-      "format": "YYYY-MM-DD"
+      "format": "YYYY-MM-DD",
+      "date-created-source-of-truth": "file system",
+      "date-modified-source-of-truth": "file system",
+      "convert-to-utc": false,
+      "update-on-file-contents-updated": "never"
     },
     "yaml-title": {
       "enabled": false,
@@ -255,7 +264,8 @@
       "enabled": false,
       "preserve-existing-alias-section-style": true,
       "keep-alias-that-matches-the-filename": false,
-      "use-yaml-key-to-keep-track-of-old-filename-or-heading": true
+      "use-yaml-key-to-keep-track-of-old-filename-or-heading": true,
+      "alias-helper-key": "linter-yaml-title-alias"
     },
     "blockquote-style": {
       "enabled": false,
@@ -272,23 +282,52 @@
       "enabled": false,
       "characters-to-remove-space-before": ",!?;:).’”]",
       "characters-to-remove-space-after": "¿¡‘“(["
+    },
+    "add-blank-line-after-yaml": {
+      "enabled": false
+    },
+    "dedupe-yaml-array-values": {
+      "enabled": true,
+      "dedupe-alias-key": true,
+      "dedupe-tag-key": true,
+      "dedupe-array-keys": true,
+      "ignore-keys": ""
+    },
+    "sort-yaml-array-values": {
+      "enabled": false,
+      "sort-alias-key": true,
+      "sort-tag-key": true,
+      "sort-array-keys": true,
+      "ignore-keys": "",
+      "sort-order": "Ascending Alphabetical"
+    },
+    "default-language-for-code-fences": {
+      "enabled": false,
+      "default-language": ""
+    },
+    "empty-line-around-horizontal-rules": {
+      "enabled": false
     }
   },
   "lintOnSave": true,
   "recordLintOnSaveLogs": false,
   "displayChanged": true,
+  "lintOnFileChange": false,
+  "displayLintOnFileChangeNotice": false,
   "settingsConvertedToConfigKeyValues": true,
   "foldersToIgnore": [
-    "mam-core/templates"
+    "mm-core/templates"
   ],
+  "filesToIgnore": [],
   "linterLocale": "system-default",
-  "logLevel": 4,
+  "logLevel": "ERROR",
   "lintCommands": [],
   "customRegexes": [],
   "commonStyles": {
     "aliasArrayStyle": "single-line",
     "tagArrayStyle": "single-line",
     "minimumNumberOfDollarSignsToBeAMathBlock": 2,
-    "escapeCharacter": "\""
+    "escapeCharacter": "\"",
+    "removeUnnecessaryEscapeCharsForMultiLineArrays": false
   }
 }
