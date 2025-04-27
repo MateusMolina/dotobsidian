@@ -13,10 +13,18 @@
   ],
   "exportFormats": [
     {
-      "name": "Import #1",
+      "name": "Import Bare Reference",
       "outputPathTemplate": "mm-core/@{{citekey}}.md",
       "imageOutputPathTemplate": "mm-core/assets/",
-      "imageBaseNameTemplate": "@{{citekey}}-",
+      "imageBaseNameTemplate": "@{{citekey}}",
+      "templatePath": "mm-core/templates/citation_bare.md",
+      "cslStyle": "ieee"
+    },
+    {
+      "name": "Import Reference With All Highlights",
+      "outputPathTemplate": "mm-core/@{{citekey}}.md",
+      "imageOutputPathTemplate": "mm-core/assets/",
+      "imageBaseNameTemplate": "@{{citekey}}",
       "templatePath": "mm-core/templates/citation.md",
       "cslStyle": "ieee"
     }
@@ -24,5 +32,7 @@
   "citeSuggestTemplate": "[[{{citekey}}]]",
   "openNoteAfterImport": true,
   "whichNotesToOpenAfterImport": "first-imported-note",
-  "shouldConcat": true
+  "shouldConcat": true,
+  "pdfExportImageOCR": true,
+  "pdfExportImageTesseractPath": "/opt/homebrew/bin/tesseract"
 }
