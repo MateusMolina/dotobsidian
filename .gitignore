@@ -10,6 +10,9 @@ plugins/**/*
 !plugins/**/
 !plugins/**/data.json
 
+plugins/obsidian-pandoc-reference-list
+plugins/periodic-notes
+
 main.js
 styles.css
 manifest.json

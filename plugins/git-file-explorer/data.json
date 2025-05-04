@@ -3,5 +3,7 @@
   "enableNavColorUpdater": true,
   "gitChangesWidgetActive": true,
   "gitSyncWidgetActive": true,
-  "navColorStyle": "margin-highlight"
+  "navColorStyle": "margin-highlight",
+  "autoSyncOnStartup": true,
+  "autoSyncFrequency": 60
 }
