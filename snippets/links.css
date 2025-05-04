@@ -2,3 +2,8 @@
 .internal-link {
     text-decoration: none !important;
 }
+
+.markdown-source-view.mod-cm6 .cm-underline {
+  text-decoration: none;
+}
+
