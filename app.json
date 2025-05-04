@@ -9,5 +9,6 @@
   "showInlineTitle": false,
   "propertiesInDocument": "source",
   "alwaysUpdateLinks": true,
-  "promptDelete": false
+  "promptDelete": false,
+  "showUnsupportedFiles": true
 }

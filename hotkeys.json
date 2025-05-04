@@ -26,21 +26,6 @@
       "key": "P"
     }
   ],
-  "editor:context-menu": [
-    {
-      "modifiers": [
-        "Mod"
-      ],
-      "key": "1"
-    }
-  ],
-  "workspace:goto-tab-2": [],
-  "workspace:goto-tab-3": [],
-  "workspace:goto-tab-4": [],
-  "workspace:goto-tab-5": [],
-  "workspace:goto-tab-6": [],
-  "workspace:goto-tab-7": [],
-  "workspace:goto-tab-8": [],
   "workspace:toggle-pin": [
     {
       "modifiers": [
@@ -59,6 +44,22 @@
       "key": "X"
     }
   ],
-  "workspace:goto-tab-1": [],
-  "workspace:goto-last-tab": []
+  "workspace:goto-last-tab": [],
+  "workspace:next-tab": [],
+  "app:go-forward": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "ArrowRight"
+    }
+  ],
+  "app:go-back": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "ArrowLeft"
+    }
+  ]
 }

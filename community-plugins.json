@@ -25,5 +25,7 @@
   "obsidian-style-settings",
   "obsidian-smart-typography",
   "obsidian-languagetool-plugin",
-  "obsidian-vimrc-support"
+  "obsidian-vimrc-support",
+  "obsidian-pandoc-reference-list",
+  "obsidian-completr"
 ]
